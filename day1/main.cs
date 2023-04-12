@@ -8,10 +8,7 @@ internal class Program
         int calories = 0;
         foreach (var line in file)
         {
-            if (line != "")
-            {
-                calories = calories + int.Parse(line);
-            }
+            if (line != "") calories = calories + int.Parse(line);
             else
             {
                 sum.Add(calories);
@@ -28,10 +25,10 @@ internal class Program
 
         // Part 2
         int p2sum = 0;
-        foreach (var x in sum.GetRange(0, 3)) {
+        foreach (var x in sum.GetRange(0, 3))
+        {
             p2sum = p2sum + x;
         }
         Console.WriteLine("Part two: " + p2sum);
-
     }
 }
